@@ -5,17 +5,17 @@ var weekdays = ["日", "一", "二", "三", "四", "五", "六"];
 
 function picture_generator(number) {
     if (number >= 0 && number <= 50) {
-        return "https://dummyimage.com/1933x1068/1e9165/ffffff.png&text=" + number;
+        return "https://dummyimage.com/1933x1068/009865/ffffff.png&text=" + number;
     } else if (number >= 51 && number <= 100) {
-        return "https://dummyimage.com/1933x1068/fc920b/ffffff.png&text=" + number;
+        return "https://dummyimage.com/1933x1068/fffb26/000000.png&text=" + number;
     } else if (number >= 100 && number <= 150) {
-        return "https://dummyimage.com/1933x1068/ef4621/ffffff.png&text=" + number;
+        return "https://dummyimage.com/1933x1068/ff9734/ffffff.png&text=" + number;
     } else if (number >= 151 && number <= 199) {
-        return "https://dummyimage.com/1933x1068/b71411/ffffff.png&text=" + number;
+        return "https://dummyimage.com/1933x1068/ca0034/ffffff.png&text=" + number;
     } else if (number >= 200 && number <= 300) {
-        return "https://dummyimage.com/1933x1068/5b0e31/ffffff.png&text=" + number;
+        return "https://dummyimage.com/1933x1068/670099/ffffff.png&text=" + number;
     } else if (number > 301) {
-        return "https://dummyimage.com/1933x1068/4f1770/ffffff.png&text=" + number;
+        return "https://dummyimage.com/1933x1068/7e0123/ffffff.png&text=" + number;
     } else {
         return "https://dummyimage.com/1933x1068/232830/ffffff.png&text=NaN";
     }
@@ -53,7 +53,7 @@ function info_generator(number) {
         return "對敏感族群會有明顯惡化的現象，建議留在室內並減少體力消耗活動；一般大眾則視身體狀況，可能產生眼睛不適、氣喘、咳嗽、痰多、喉痛等症狀。";
     } else if (number > 301) {
         return "健康威脅達到緊急，所有人都可能受到影響。應避免戶外活動，室內應緊閉門窗，必要外出應配戴口罩等防護用具。應避免戶外活動，室內應緊閉門窗，必要外出應配戴口罩等防護用具。";
-    }
+    } 
 
 }
 
@@ -70,6 +70,8 @@ function info_output_generator(number) {
         return "1.一般民眾應減少戶外活動。  \n2.學生應立即停止戶外活動，並將課程調整於室內進行。  \n3.有心臟、呼吸道及心血管疾病患者、孩童及老年人應留在室內並減少體力消耗活動，外出應配戴口罩。  \n4.具有氣喘的人應增加使用吸入劑的頻率。";
     } else if (number > 301) {
         return "1.一般民眾應避免戶外活動，室內應緊閉門窗，必要外出應配戴口罩等防護用具。  \n2.學生應立即停止戶外活動，並將課程調整於室內進行。  \n3.有心臟、呼吸道及心血管疾病患者、孩童及老年人應留在室內並避免體力消耗活動，外出應配戴口罩。  \n4.具有氣喘的人應增加使用吸入劑的頻率。";
+    }else {
+        return "設備維護、儀器校正、儀器異常、傳輸異常、電力異常 \n或有效數據不足等需查修維護情形，以致資料暫時中斷服務。"
     }
 }
 
