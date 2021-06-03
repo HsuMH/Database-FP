@@ -162,20 +162,41 @@
         </div>
       </div>
 
-      
-      <div class="section">
+
         <div class="container">
-          <div class="row">
-              <div class="col-md-8 mx-auto text-center">
-                  <h2 class="title">現在天氣概況</h1>
-                  <div id="weather_report"></div>
+          <div class="row">              
+            <div class="col-md-10 mx-auto text-center">
+              <h2 class="title">現在天氣概況</h1>
+              <div id="weather_report"></div>
+              
+              <div class="section">
+                <div class="row"> 
+                  <div class="col-md-8 mx-auto text-center">
+                    <h4>更新時間 • <b> 
+                      <script>
+                        var today = new Date();
+                        var nowTime = today.getTime();
+                        today.setTime(parseInt(nowTime));
+                        var oYear = today.getFullYear().toString();
+                        var oMoth = (today.getMonth() + 1).toString();
+                        var oDay = today.getDate().toString();
+                        var oHour = today.getHours().toString();
+                        if (oMoth.length <= 1) { oMoth = '0' + oMoth; }
+                        if (oDay.length <= 1) { oDay = '0' + oDay; }
+                        if (oHour.length <= 1) { oHour = '0' + oHour; }
+                        document.write(oYear + "/" + oMoth + "/" + oDay + " " + oHour + ":00")
+                      </script>
+                    </b></h4>
+                    <a href="https://assistant.google.com/services/invoke/uid/000000a573924fc8" class="btn btn-white btn-round" target="_blank"><b><span class="iconify" data-icon="mdi-google-assistant" data-inline="false"></span>&emsp;Try it on Google Assistant</b></a>
+                  </div>
+                </div>
               </div>
+            </div>
           </div>
         </div>
-      </div>
+        
 
 
-      <div class="section section-basic">
         <div class="container col-md-12">
           <div class="col-md-12 mx-auto">
             <div class="card card-nav-tabs card-plain">
@@ -187,6 +208,13 @@
                         <a class="nav-link active" href="#Taipei_nav" data-toggle="tab">
                           <h4>
                             臺北
+                          </h4>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#Keelung_nav" data-toggle="tab">
+                          <h4>
+                            基隆
                           </h4>
                         </a>
                       </li>
@@ -282,9 +310,23 @@
                         </a>
                       </li>
                       <li class="nav-item">
+                        <a class="nav-link" href="#Hualien_nav" data-toggle="tab">
+                          <h4>
+                            花蓮
+                          </h4>
+                        </a>
+                      </li>
+                      <li class="nav-item">
                         <a class="nav-link" href="#Taitung_nav" data-toggle="tab">
                           <h4>
                             台東
+                          </h4>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#OuterIsland_nav" data-toggle="tab">
+                          <h4>
+                            離島地區
                           </h4>
                         </a>
                       </li>
@@ -297,9 +339,12 @@
                   <div class="row tab-pane active" id="Taipei_nav">
                     
                   </div>
+                  <div class="tab-pane" id="Keelung_nav">
+
+                  </div>
                   <div class="tab-pane" id="NewTaipei_nav">
 
-                  </div>                  
+                  </div>                
                   <div class="tab-pane" id="Taoyuan_nav">
 
                   </div>
@@ -336,7 +381,13 @@
                   <div class="tab-pane" id="Yilan_nav">
                     
                   </div>
+                  <div class="tab-pane" id="Hualien_nav">
+                    
+                  </div>
                   <div class="tab-pane" id="Taitung_nav">
+                    
+                  </div>
+                  <div class="tab-pane" id="OuterIsland_nav">
                     
                   </div>
                 </div>
@@ -344,7 +395,7 @@
             </div>            
           </div>
         </div>
-      </div>
+
     </div>
   
 
@@ -388,6 +439,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-database.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     
     <script src="./fetch.js"></script>
 
@@ -416,7 +468,8 @@
       
       
       var Taipei = ["士林", "大同", "中山", "古亭", "松山", "陽明", "萬華"];
-      var NewTaipei = ["三重", "土城", "永和", "汐止", "板橋", "林口", "淡水", "富貴角", "菜寮", "新店", "新莊", "萬里"];
+      var Keelung = ["基隆"];
+      var NewTaipei = ["三重", "土城", "永和", "汐止", "板橋", "林口", "淡水", "富貴角", "菜寮", "新店", "新莊", "萬里"];      
       var Taoyuan = ["大園", "中壢", "平鎮", "桃園", "龍潭", "觀音"];
       var Hsinchu = ["新竹", "竹東", "湖口"];
       var Miaoli = ["三義", "苗栗", "頭份"];
@@ -429,15 +482,17 @@
       var Kaohsiung = ["美濃", "橋頭", "楠梓", "仁武", "左營", "前金", "鳳山", "復興", "前鎮", "小港", "大寮", "林園"];
       var Pingtung = ["屏東", "恆春", "潮州"];
       var Yilan = ["冬山", "宜蘭"];
+      var Hualien = ["花蓮"];
       var Taitung = ["臺東", "關山"];
+      var OuterIsland = ["金門", "馬公", "馬祖"];
 
-
-      var city = [Taipei, NewTaipei, Taoyuan, Hsinchu, Miaoli, Taichung, Changhua, Nantou, 
-                  Yunlin, Chiayi, Tainan, Kaohsiung, Pingtung, Yilan, Taitung];
       
-      var cityCh = ['臺北', '新北', '桃園', '新竹', '苗栗', '台中', '彰化', '南投', '雲林', '嘉義', '台南', '高雄', '屏東', '宜蘭', '台東'];
-      var cityNav = ['Taipei_nav', 'NewTaipei_nav', 'Taoyuan_nav', 'Hsinchu_nav', 'Miaoli_nav', 'Taichung_nav', 'Changhua_nav', 'Nantou_nav', 
-                      'Yunlin_nav', 'Chiayi_nav', 'Tainan_nav', 'Kaohsiung_nav', 'Pingtung_nav', 'Yilan_nav', 'Taitung_nav'];
+      var city = [Taipei, Keelung, NewTaipei, Taoyuan, Hsinchu, Miaoli, Taichung, Changhua, Nantou, 
+                  Yunlin, Chiayi, Tainan, Kaohsiung, Pingtung, Yilan, Hualien, Taitung, OuterIsland];
+      
+      var cityCh = ['臺北', '基隆', '新北', '桃園', '新竹', '苗栗', '台中', '彰化', '南投', '雲林', '嘉義', '台南', '高雄', '屏東', '宜蘭', '花蓮', '台東', '離島地區'];
+      var cityNav = ['Taipei_nav', 'Keelung_nav', 'NewTaipei_nav', 'Taoyuan_nav', 'Hsinchu_nav', 'Miaoli_nav', 'Taichung_nav', 'Changhua_nav', 'Nantou_nav', 
+                      'Yunlin_nav', 'Chiayi_nav', 'Tainan_nav', 'Kaohsiung_nav', 'Pingtung_nav', 'Yilan_nav', 'Hualien_nav', 'Taitung_nav', 'OuterIsland_nav'];
       
       var myData = firebase.database().ref('/TWair');
 
@@ -458,13 +513,11 @@
           let content2 = '';
 
           content1 = content1 +
-                '<div class="container">' +
+                  '<div class="container">' +
                     
-                    '<div class="section text-center">' +
                       '<div class="row">' +
                         '<div class="col-md-8 ml-auto mr-auto">' +
-                          '<h2 class="title">' + cityCh[c] + '</h2>' +
-                          '<h5 class="description">' + "共" + city[c].length + "個監測站" + '</h5>' +
+                          '<h4 class="description">' + "共" + city[c].length + "個監測站" + '</h4>' +
                         '</div>' +
                       '</div>' +
                       
@@ -496,18 +549,9 @@
           }
 
           content2 = content2 + 
+                        '</div>' +
                       '</div>' +
-                                  '</div>' +
-                                '</div>' +
-                                
-                                  '<div class="section section-contacts">' +
-                                  '<div class="row">' +
-                                    '<div class="col-md-8 ml-auto mr-auto">' +
-                                    '</div>' +
-                                  '</div>' +
-                                '</div>'+
-
-                              '</div>';
+                    '</div>';
           document.getElementById(cityNav[c]).innerHTML = content1 + content + content2
           
           
