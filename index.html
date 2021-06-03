@@ -23,52 +23,12 @@
     <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
-                  空汙查詢精靈 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                    <li class="dropdown nav-item">
-                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                            <i class="material-icons">apps</i> Components
-                        </a>
-                        <div class="dropdown-menu dropdown-with-icons">
-                            <a href="../index.html" class="dropdown-item">
-                                <i class="material-icons">layers</i> All Components
-                            </a>
-                            <a href="https://demos.creative-tim.com/material-kit/docs/2.0/getting-started/introduction.html" class="dropdown-item">
-                                <i class="material-icons">content_paste</i> Documentation
-                            </a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.creative-tim.com/product/material-kit-pro" target="_blank">
-                            <i class="material-icons">unarchive</i> Upgrade to PRO
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" data-original-title="Follow us on Twitter" rel="nofollow">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank" data-original-title="Like us on Facebook" rel="nofollow">
-                            <i class="fa fa-facebook-square"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram" rel="nofollow">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                <a class="navbar-brand" href="https://hsumh.github.io/Database-FP/">
+                  <h3>
+                    空汙查詢精靈 
+                  </h3>                
+                </a>                
+            </div>            
         </div>
     </nav>
     <div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url('./assets/img/bg2.jpg');">
@@ -76,11 +36,11 @@
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto">
             <div class="brand">
-              <h1>Final Project</h1>
-              <h2>Team04</h2>
-              <h3>M10915078 游紹宏</h3>
-              <h3>M10915054 高培循 </h3>
-              <h3>M10915071 徐明漢 </h3>
+              <h1 class="title">Final Project</h1>
+              <h2 class="title">Team04</h2>
+              <h3 class="title">M10915078 游紹宏</h3>
+              <h3 class="title">M10915054 高培循 </h3>
+              <h3 class="title">M10915071 徐明漢 </h3>
             </div>
           </div>
         </div>
@@ -92,6 +52,120 @@
       <div class="section">
         <div class="container">
           <div class="row">
+            <div class="card col-md-12 mr-auto ml-auto" style="margin:30px 30px">
+              <div class="card-body">
+                  <div class="col-md-8 mx-auto text-center">
+                    <h2 class="title">空氣品質指標 Air Quality index</h2>
+                  </div>
+                  <p>
+                    <h5>
+                    空氣品質指標為依據監測資料將當日空氣中臭氧(O3)、細懸浮微粒(PM2.5)、懸浮微粒(PM10)、一氧化碳(CO)、二氧化硫(SO2)及二氧化氮(NO2)濃度等數值，以其對人體健康的影響程度，分別換算出不同污染物之副指標值，再以當日各副指標之最大值為該測站當日之空氣品質指標值(AQI)。
+                    </h5>
+                  </p>
+                  <table style="text-align: center; 
+                      width: auto; 
+                      flex-direction: column;
+                      justify-content: center;">
+                      <tr style="
+                          text-align-last: justify;
+                          -moz-text-align-last: justify ;  
+                          text-align: justify;
+                          text-justify: distribute-all-lines;">
+                          <td style="width: 17%;  transition: width 1.5s ease;">
+                              0
+                          </td>
+                          <td style="width: 17%;  transition: width 1.5s ease;">
+                              51
+                          </td>
+                          <td style="width: 17%;  transition: width 1.5s ease;">
+                              101
+                          </td>
+                          <td style="width: 17%;  transition: width 1.5s ease;">
+                              151
+                          </td>
+                          <td style=" width: 17%;  transition: width 1.5s ease;">
+                              201
+                          </td>
+                          <td style=" width: 50%;  transition: width 1.5s ease;">
+                              301 500
+                        </td>
+                      </tr>
+                      <tr style="height: fit-content;">
+                          <td>
+                              <div class="progress progress-line-danger" style="margin-bottom: 10px;">
+                                  <div class="progress-bar" style="width: 100%; background: #009865;">
+                                      <span class="sr-only">35% Complete (success)</span>
+                                  </div>
+                              </div>
+                          </td>
+                          <td>
+                              <div class="progress progress-line-danger" style="margin-bottom: 10px;">
+                                  <div class="progress-bar" style="width: 100%; background: #fffb26;">
+                                      <span class="sr-only">35% Complete (success)</span>
+                                  </div>
+                              </div>
+                          </td>
+                          <td>
+                              <div class="progress progress-line-danger" style="margin-bottom: 10px;">
+                                  <div class="progress-bar" style="width: 100%; background: #ff9734;">
+                                      <span class="sr-only">35% Complete (success)</span>
+                                  </div>
+                              </div>
+                          </td>
+                          <td>
+                              <div class="progress progress-line-danger" style="margin-bottom: 10px;">
+                                  <div class="progress-bar" style="width: 100%; background: #ca0034;">
+                                      <span class="sr-only">35% Complete (success)</span>
+                                  </div>
+                              </div>
+                          </td>
+                          <td>
+                              <div class="progress progress-line-danger" style="margin-bottom: 10px;">
+                                  <div class="progress-bar" style="width: 100%; background: #670099;">
+                                      <span class="sr-only">35% Complete (success)</span>
+                                  </div>
+                              </div>
+                          </td>
+                          <td>
+                            <div class="progress progress-line-danger" style="margin-bottom: 10px;">
+                                <div class="progress-bar" style="width: 100%; background: #7e0123;">
+                                    <span class="sr-only">35% Complete (success)</span>
+                                </div>
+                            </div>
+                        </td>
+                      </tr>
+                      <tr style="height: fit-content;">
+                          <td>
+                              &nbsp;良好&nbsp;
+                          </td>
+                          <td>
+                              &nbsp;普通&nbsp;
+                          </td>
+                          <td>
+                              &nbsp;對敏感族群不健康&nbsp;
+                          </td>
+                          <td>
+                              &nbsp;對所有敏感族群不健康&nbsp;
+                          </td>
+                          <td>
+                              &nbsp;非常不健康&nbsp;
+                          </td>
+                          <td>
+                            &nbsp;危害等級&nbsp;
+                        </td>
+                      </tr>
+                  </table>
+                  <br><b>© 資料來源：</b> <a href="https://www.cwb.gov.tw/V8/C/" target="_blank" style="color:#248da3">中央氣象局</a> 與 <a href="https://airtw.epa.gov.tw/" target="_blank" style="color:#248da3">行政院環境保護署 (空氣品質監測網)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="section">
+        <div class="container">
+          <div class="row">
               <div class="col-md-8 mx-auto text-center">
                   <h2 class="title">現在天氣概況</h1>
                   <div id="weather_report"></div>
@@ -99,61 +173,120 @@
           </div>
         </div>
       </div>
-      
 
 
       <div class="section section-basic">
-        <div class="container">
+        <div class="container col-md-12">
           <div class="col-md-12 mx-auto">
             <div class="card card-nav-tabs card-plain">
-              <div class="card-header card-header-danger">
+              <div class="card-header card-header-primary">
                 <div class="nav-tabs-navigation">
                   <div class="nav-tabs-wrapper">
                     <ul class="nav nav-tabs" data-tabs="tabs">
                       <li class="nav-item">
-                        <a class="nav-link active" href="#Taipei_nav" data-toggle="tab">台北市</a>
+                        <a class="nav-link active" href="#Taipei_nav" data-toggle="tab">
+                          <h4>
+                            臺北
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#NewTaipei_nav" data-toggle="tab">新北市</a>
+                        <a class="nav-link" href="#NewTaipei_nav" data-toggle="tab">
+                          <h4>
+                            新北
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Taoyuan_nav" data-toggle="tab">桃園市</a>
+                        <a class="nav-link" href="#Taoyuan_nav" data-toggle="tab">
+                          <h4>
+                            桃園
+                         </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Hsinchu_nav" data-toggle="tab">新竹</a>
+                        <a class="nav-link" href="#Hsinchu_nav" data-toggle="tab">
+                          <h4>
+                            新竹
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Miaoli_nav" data-toggle="tab">苗栗</a>
+                        <a class="nav-link" href="#Miaoli_nav" data-toggle="tab">
+                          <h4>
+                            苗栗
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Taichung_nav" data-toggle="tab">台中</a>
+                        <a class="nav-link" href="#Taichung_nav" data-toggle="tab">
+                          <h4>
+                            台中
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Changhua_nav" data-toggle="tab">彰化</a>
+                        <a class="nav-link" href="#Changhua_nav" data-toggle="tab">
+                          <h4>
+                            彰化
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Nantou_nav" data-toggle="tab">南投</a>
+                        <a class="nav-link" href="#Nantou_nav" data-toggle="tab">
+                          <h4>
+                            南投
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Yunlin_nav" data-toggle="tab">雲林</a>
+                        <a class="nav-link" href="#Yunlin_nav" data-toggle="tab">
+                          <h4>
+                            雲林
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Chiayi_nav" data-toggle="tab">嘉義</a>
+                        <a class="nav-link" href="#Chiayi_nav" data-toggle="tab">
+                          <h4>
+                            嘉義
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Tainan_nav" data-toggle="tab">台南</a>
+                        <a class="nav-link" href="#Tainan_nav" data-toggle="tab">
+                          <h4>
+                            台南
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Kaohsiung_nav" data-toggle="tab">高雄</a>
+                        <a class="nav-link" href="#Kaohsiung_nav" data-toggle="tab">
+                          <h4>
+                            高雄
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Pingtung_nav" data-toggle="tab">屏東</a>
+                        <a class="nav-link" href="#Pingtung_nav" data-toggle="tab">
+                          <h4>
+                            屏東
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Yilan_nav" data-toggle="tab">宜蘭</a>
+                        <a class="nav-link" href="#Yilan_nav" data-toggle="tab">
+                          <h4>
+                            宜蘭
+                          </h4>
+                        </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#Taitung_nav" data-toggle="tab">台東</a>
+                        <a class="nav-link" href="#Taitung_nav" data-toggle="tab">
+                          <h4>
+                            台東
+                          </h4>
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -310,7 +443,13 @@
 
 
       myData.once('value', function(snapshot) {
-        document.getElementById("weather_report").innerHTML = snapshot.val().report;
+        let reportContentF = '';
+        let reportContentb = '';
+        reportContentF = reportContentF +
+        '<h5>';
+        reportContentb = reportContentb +
+        '</h5>';
+        document.getElementById("weather_report").innerHTML = reportContentF + snapshot.val().report + reportContentb;
         
 
         for (var c = 0; c < city.length; c++) {
@@ -373,98 +512,7 @@
           
           
           
-        }
-        
-        /*
-
-        
-        var Taipei_content = '';
-        for (var i = 0; i < Taipei.length; i++) {
-            var name = Taipei[i];
-            var data = snapshot.val().data[name]
-            Taipei_content = Taipei_content +
-                '<div class="col-md-3 ml-auto mr-auto">' +
-                '<div class="card">' +
-                '<div class="card-body" style="padding: 0;">' +
-                '<img class="card-img-top" src="' + picture_generator(data.AQI) + '" rel="nofollow" alt="Card image cap">' +
-                ' <div class = "card-body" >' +
-                '<p class = "card-text"> <h3 class="card-title">' + name + '</h3>' +
-                '<h3 class="card-text">' + status_generator(data.AQI) + '</h3>' +
-                '<h7 class="card-text"><small class="text-muted">' + info_output_generator(data.AQI) + '</small></h7>' +
-                '</p> </div>' +
-                '</div>' +
-                '</div>' +
-                '</div>';
-        }
-        document.getElementById('臺北市').innerHTML = Taipei_content
-
-
-        var NewTaipei_content = '';
-        for (var i = 0; i < NewTaipei.length; i++) {
-            var name = NewTaipei[i];
-            var data = snapshot.val().data[name]
-            NewTaipei_content = NewTaipei_content +
-                '<div class="col-md-3 ml-auto mr-auto">' +
-                '<div class="card">' +
-                '<div class="card-body" style="padding: 0;">' +
-                '<img class="card-img-top" src="' + picture_generator(data.AQI) + '" rel="nofollow" alt="Card image cap">' +
-                ' <div class = "card-body" >' +
-                '<p class = "card-text"> <h3 class="card-title">' + name + '</h3>' +
-                '<h3 class="card-text">' + status_generator(data.AQI) + '</h3>' +
-                '<h7 class="card-text"><small class="text-muted">' + info_output_generator(data.AQI) + '</small></h7>' +
-                '</p> </div>' +
-                '</div>' +
-                '</div>' +
-                '</div>';
-        }
-        document.getElementById('新北市').innerHTML = NewTaipei_content
-        
-
-        var Taoyuan_content = '';
-        for (var i = 0; i < Taoyuan.length; i++) {
-            var name = Taoyuan[i];
-            var data = snapshot.val().data[name]
-            Taoyuan_content = Taoyuan_content +
-                '<div class="col-md-3 ml-auto mr-auto">' +
-                '<div class="card">' +
-                '<div class="card-body" style="padding: 0;">' +
-                '<img class="card-img-top" src="' + picture_generator(data.AQI) + '" rel="nofollow" alt="Card image cap">' +
-                ' <div class = "card-body" >' +
-                '<p class = "card-text"> <h3 class="card-title">' + name + '</h3>' +
-                '<h3 class="card-text">' + status_generator(data.AQI) + '</h3>' +
-                '<h7 class="card-text"><small class="text-muted">' + info_output_generator(data.AQI) + '</small></h7>' +
-                '</p> </div>' +
-                '</div>' +
-                '</div>' +
-                '</div>';
-        }
-        document.getElementById('桃園市').innerHTML = Taoyuan_content
-
-        
-
-        var Hsinchu_content = '';
-        for (var i = 0; i < Hsinchu.length; i++) {
-            var name = Hsinchu[i];
-            var data = snapshot.val().data[name]
-            Hsinchu_content = Hsinchu_content +
-                '<div class="col-md-3 ml-auto mr-auto">' +
-                '<div class="card">' +
-                '<div class="card-body" style="padding: 0;">' +
-                '<img class="card-img-top" src="' + picture_generator(data.AQI) + '" rel="nofollow" alt="Card image cap">' +
-                ' <div class = "card-body" >' +
-                '<p class = "card-text"> <h3 class="card-title">' + name + '</h3>' +
-                '<h3 class="card-text">' + status_generator(data.AQI) + '</h3>' +
-                '<h7 class="card-text"><small class="text-muted">' + info_output_generator(data.AQI) + '</small></h7>' +
-                '</p> </div>' +
-                '</div>' +
-                '</div>' +
-                '</div>';
-        }
-        document.getElementById('新竹').innerHTML = Hsinchu_content
-
-        
-
-        */
+        } 
       })
     </script>
 
